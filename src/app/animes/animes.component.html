@@ -1,0 +1,26 @@
+<h1>
+  Lista de Animes
+</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+  <div class="card"*ngFor= "let s of animes" style="width: 18rem;">
+    <div class="col-sm card-body " >
+
+      <figure class="figure">
+        <img class="img-fluid" src='{{s.image}}'/>
+        <figcaption class="title-caption text-center"></figcaption>
+        {{s.name}}
+        <hr>
+        <p style="color:red;">
+        {{s.score}}
+       </p>
+        <hr>
+        <td> <button type="button" class="btn btn-info" (click)="onSelected(s)">Ver detalle</button> </td>
+    </figure>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
