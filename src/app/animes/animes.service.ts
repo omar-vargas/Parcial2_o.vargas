@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 import { Anime } from './anime';
+import { AnimeDetail } from './anime-Detail';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,8 +13,8 @@ export class AnimesService {
 
 private apiUrl:string = environment.ApiUrl;
 constructor(private http: HttpClient) { }
-getAnimes(): Observable<Anime[]> {
-  return this.http.get<Anime[]>(this.apiUrl);
+getAnimes(): Observable<AnimeDetail[]> {
+  return this.http.get<AnimeDetail[]>(this.apiUrl);
 }
 
 

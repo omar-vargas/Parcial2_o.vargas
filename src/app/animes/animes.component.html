@@ -2,6 +2,17 @@
   Lista de Animes
 </h1>
 
+
+<div class="row p-2">
+  <div class="col border">
+    <div *ngIf="selected">
+    <app-concert-detail [concertDetail]="selectedConcert"></app-concert-detail>
+  </div>
+</div>
+</div>
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-sm">

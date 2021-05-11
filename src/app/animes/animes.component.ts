@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Anime } from './anime';
+import { AnimeDetail } from './anime-Detail';
 import { AnimesService } from './animes.service';
 
 @Component({
@@ -10,14 +11,15 @@ import { AnimesService } from './animes.service';
 export class AnimesComponent implements OnInit {
 
 
-  animes: Array<Anime>;
+  animes: Array<AnimeDetail>;
 
   constructor(private AnimesService: AnimesService) { }
 
-
-
-
+  selectedAnime: Anime;
   selected = false;
+
+
+
 
 
 
@@ -33,4 +35,8 @@ export class AnimesComponent implements OnInit {
   }
 
 
+  onSelected(b: Anime): void {
+    this.selected = true;
+    this.selectedAnime = b;
+  }
 }
